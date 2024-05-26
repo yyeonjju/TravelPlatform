@@ -19,7 +19,7 @@ struct RestaurantCell {
 }
 
 class RestaurantTableViewController: UITableViewController {
-    var restaurantTableViewList = RestaurantList().restaurantArray.map{
+    var originalRestaurantData = RestaurantList().restaurantArray.map{
         RestaurantCell(
             image : $0.image,
             name: $0.name,
@@ -30,10 +30,30 @@ class RestaurantTableViewController: UITableViewController {
             isLiked : false
         )
     }
+    lazy var restaurantTableViewList = originalRestaurantData
+    
+    @IBOutlet var searchTextField: UITextField!
+    @IBOutlet var searchBUtton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 250
+        
+        setupUI()
+    }
+    
+    // MARK: - setupUI
+    private func setupUI() {
+        searchTextField.backgroundColor = .systemGray5
+        searchTextField.placeholder = "식당을 검색하세요"
+        searchTextField.layer.cornerRadius = 10
+        
+        
+        searchBUtton.layer.cornerRadius = 10
+        searchBUtton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        searchBUtton.tintColor = .black
+        searchBUtton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        
     }
 
     // MARK: - Table view data source
@@ -76,11 +96,33 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     
+    // MARK: - addEvent
+
     @objc func likeButtonTapped(sender : UIButton) {
         let index = sender.tag
         restaurantTableViewList[index].isLiked.toggle()
         tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
         
+        //original리스트에도 함께 업데이트 : 검색 풀어져도 좋아요 유지될 수 있어서
+        let restaurantName = restaurantTableViewList[index].name
+        let originalDataIndex = originalRestaurantData.firstIndex{$0.name == restaurantName}!
+        originalRestaurantData[originalDataIndex].isLiked.toggle()
+    }
+    
+    @objc func searchButtonTapped() {
+        tableView.endEditing(true)
+        
+        let text = searchTextField.text ?? ""
+        if text.isEmpty {
+            restaurantTableViewList = originalRestaurantData
+        } else {
+            restaurantTableViewList = restaurantTableViewList.filter{
+                $0.name.contains(text) ||
+                $0.address.contains(text) ||
+                $0.category.contains(text)
+            }
+        }
+        tableView.reloadData()
     }
 
 }
