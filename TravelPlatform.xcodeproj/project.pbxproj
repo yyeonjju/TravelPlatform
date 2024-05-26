@@ -17,6 +17,8 @@
 		7D263A182C02F351008A8F4F /* TravelMagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A172C02F351008A8F4F /* TravelMagazineTableViewCell.swift */; };
 		7D263A1B2C02F5BF008A8F4F /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A1A2C02F5BF008A8F4F /* MagazineInfo.swift */; };
 		7D263A1E2C02FE79008A8F4F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A1D2C02FE79008A8F4F /* DateFormatter.swift */; };
+		7D263A212C03033B008A8F4F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D263A202C03033B008A8F4F /* Kingfisher */; };
+		7D263A232C0304B6008A8F4F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A222C0304B6008A8F4F /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,7 @@
 		7D263A172C02F351008A8F4F /* TravelMagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMagazineTableViewCell.swift; sourceTree = "<group>"; };
 		7D263A1A2C02F5BF008A8F4F /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		7D263A1D2C02FE79008A8F4F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		7D263A222C0304B6008A8F4F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D263A212C03033B008A8F4F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7D263A1A2C02F5BF008A8F4F /* MagazineInfo.swift */,
+				7D263A222C0304B6008A8F4F /* ImageManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -127,6 +132,9 @@
 			dependencies = (
 			);
 			name = TravelPlatform;
+			packageProductDependencies = (
+				7D263A202C03033B008A8F4F /* Kingfisher */,
+			);
 			productName = TravelPlatform;
 			productReference = 7D2639FC2C02EF44008A8F4F /* TravelPlatform.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 7D2639F32C02EF44008A8F4F;
+			packageReferences = (
+				7D263A1F2C03033B008A8F4F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7D2639FD2C02EF44008A8F4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,6 +196,7 @@
 				7D263A042C02EF44008A8F4F /* ViewController.swift in Sources */,
 				7D263A182C02F351008A8F4F /* TravelMagazineTableViewCell.swift in Sources */,
 				7D263A002C02EF44008A8F4F /* AppDelegate.swift in Sources */,
+				7D263A232C0304B6008A8F4F /* ImageManager.swift in Sources */,
 				7D263A1E2C02FE79008A8F4F /* DateFormatter.swift in Sources */,
 				7D263A022C02EF44008A8F4F /* SceneDelegate.swift in Sources */,
 				7D263A152C02F12C008A8F4F /* TravelMagazineTableViewController.swift in Sources */,
@@ -419,6 +431,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D263A1F2C03033B008A8F4F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D263A202C03033B008A8F4F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D263A1F2C03033B008A8F4F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D2639F42C02EF44008A8F4F /* Project object */;
 }
