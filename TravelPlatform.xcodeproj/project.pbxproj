@@ -29,6 +29,7 @@
 		7D263A662C047E14008A8F4F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A652C047E14008A8F4F /* UILabel+Extension.swift */; };
 		7D263A692C0480C7008A8F4F /* TravelAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D263A682C0480C7008A8F4F /* TravelAdvertisementTableViewCell.xib */; };
 		7D263A6A2C0480C7008A8F4F /* TravelAdvertisementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A672C0480C7008A8F4F /* TravelAdvertisementTableViewCell.swift */; };
+		7D263A6D2C049978008A8F4F /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 7D263A6C2C049978008A8F4F /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D263A6D2C049978008A8F4F /* Cosmos in Frameworks */,
 				7D263A212C03033B008A8F4F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +174,7 @@
 			name = TravelPlatform;
 			packageProductDependencies = (
 				7D263A202C03033B008A8F4F /* Kingfisher */,
+				7D263A6C2C049978008A8F4F /* Cosmos */,
 			);
 			productName = TravelPlatform;
 			productReference = 7D2639FC2C02EF44008A8F4F /* TravelPlatform.app */;
@@ -203,6 +206,7 @@
 			mainGroup = 7D2639F32C02EF44008A8F4F;
 			packageReferences = (
 				7D263A1F2C03033B008A8F4F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7D263A6B2C049978008A8F4F /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = 7D2639FD2C02EF44008A8F4F /* Products */;
 			projectDirPath = "";
@@ -489,6 +493,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		7D263A6B2C049978008A8F4F /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -496,6 +508,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D263A1F2C03033B008A8F4F /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7D263A6C2C049978008A8F4F /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D263A6B2C049978008A8F4F /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

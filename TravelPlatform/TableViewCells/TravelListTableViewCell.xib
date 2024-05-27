@@ -68,7 +68,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-L3-jOJ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-L3-jOJ" customClass="CosmosView" customModule="Cosmos">
                         <rect key="frame" x="16" y="108" width="357" height="44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -99,6 +99,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cosmosStarRateView" destination="rWh-L3-jOJ" id="J8G-4h-ZY3"/>
                 <outlet property="gradeLabel" destination="DPT-77-Zej" id="RGI-Cg-Sr4"/>
                 <outlet property="likeButton" destination="dgD-y5-Zph" id="2cI-18-ceQ"/>
                 <outlet property="mainImageView" destination="FxO-yj-ebO" id="vnv-eh-PK2"/>
