@@ -12,6 +12,8 @@ class TravelListTableViewCell: UITableViewCell {
     @IBOutlet var subTitleLabel: UILabel!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var likeButton: UIButton!
+    @IBOutlet var gradeLabel: UILabel!
+    @IBOutlet var saveNumberLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +25,8 @@ class TravelListTableViewCell: UITableViewCell {
         titleLabel.setListTitleLabel()
         
         subTitleLabel.setListSubTitleLabel()
+        gradeLabel.setListSubTitleLabel()
+        saveNumberLabel.setListSubTitleLabel()
 
         mainImageView.backgroundColor = .lightGray
         mainImageView.layer.cornerRadius = 10
@@ -37,5 +41,8 @@ class TravelListTableViewCell: UITableViewCell {
         let url = URL(string: data.travel_image ?? "")
         mainImageView.kf.setImage(with: url)
         likeButton.setImage(UIImage(systemName: "heart\(data.like == true ? ".fill" : "")"), for: .normal)
+        gradeLabel.text = "별점 (\(data.grade ?? 0))"
+        saveNumberLabel.text = "저장 \(data.save?.formatted() ?? "-" )"
+        
     }
 }

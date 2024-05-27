@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -49,16 +50,48 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title=""/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPT-77-Zej">
+                        <rect key="frame" x="16.000000000000004" y="79" width="41.333333333333343" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="oMR-k0-2hU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFV-Um-T19">
+                        <rect key="frame" x="73.333333333333329" y="79" width="41.333333333333329" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0nW-cK-ZAH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-L3-jOJ">
+                        <rect key="frame" x="16" y="108" width="357" height="44"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="2WW-Z3-g2V"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="dgD-y5-Zph" firstAttribute="top" secondItem="FxO-yj-ebO" secondAttribute="top" constant="8" id="24f-4e-YxO"/>
+                    <constraint firstItem="rWh-L3-jOJ" firstAttribute="top" secondItem="DPT-77-Zej" secondAttribute="bottom" constant="8" id="2Sd-6e-VDQ"/>
+                    <constraint firstItem="DPT-77-Zej" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="7Tu-ex-yLV"/>
+                    <constraint firstItem="KFV-Um-T19" firstAttribute="top" secondItem="rwf-Xi-DxN" secondAttribute="bottom" constant="8" id="Bqs-kE-PBp"/>
+                    <constraint firstItem="rWh-L3-jOJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="I0v-Kk-LC1"/>
+                    <constraint firstItem="KFV-Um-T19" firstAttribute="leading" secondItem="DPT-77-Zej" secondAttribute="trailing" constant="16" id="Mk6-xH-DXs"/>
                     <constraint firstItem="rwf-Xi-DxN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NfV-Ib-ReT"/>
                     <constraint firstItem="rwf-Xi-DxN" firstAttribute="top" secondItem="8PJ-KT-0Hy" secondAttribute="bottom" constant="4" id="ROG-Cd-4xc"/>
                     <constraint firstItem="FxO-yj-ebO" firstAttribute="leading" secondItem="8PJ-KT-0Hy" secondAttribute="trailing" constant="8" id="aVU-8D-1Wp"/>
                     <constraint firstItem="FxO-yj-ebO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="gXm-pp-Ymb"/>
                     <constraint firstItem="FxO-yj-ebO" firstAttribute="leading" secondItem="rwf-Xi-DxN" secondAttribute="trailing" constant="8" id="iEV-GX-Dzc"/>
                     <constraint firstItem="8PJ-KT-0Hy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="jhB-HF-zRC"/>
+                    <constraint firstItem="DPT-77-Zej" firstAttribute="top" secondItem="rwf-Xi-DxN" secondAttribute="bottom" constant="8" id="lEI-kI-JeA"/>
                     <constraint firstItem="8PJ-KT-0Hy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qKc-bC-J1q"/>
+                    <constraint firstItem="FxO-yj-ebO" firstAttribute="leading" secondItem="rWh-L3-jOJ" secondAttribute="trailing" constant="8" id="tGu-d3-3W5"/>
                     <constraint firstAttribute="bottom" secondItem="FxO-yj-ebO" secondAttribute="bottom" constant="16" id="tqt-A3-PXH"/>
                     <constraint firstAttribute="trailing" secondItem="FxO-yj-ebO" secondAttribute="trailing" constant="16" id="wQS-5o-arQ"/>
                     <constraint firstItem="dgD-y5-Zph" firstAttribute="trailing" secondItem="FxO-yj-ebO" secondAttribute="trailing" constant="-8" id="wdJ-ud-Otu"/>
@@ -66,12 +99,19 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="gradeLabel" destination="DPT-77-Zej" id="RGI-Cg-Sr4"/>
                 <outlet property="likeButton" destination="dgD-y5-Zph" id="2cI-18-ceQ"/>
                 <outlet property="mainImageView" destination="FxO-yj-ebO" id="vnv-eh-PK2"/>
+                <outlet property="saveNumberLabel" destination="KFV-Um-T19" id="nbC-Sc-ckq"/>
                 <outlet property="subTitleLabel" destination="rwf-Xi-DxN" id="ada-CV-Rkf"/>
                 <outlet property="titleLabel" destination="8PJ-KT-0Hy" id="JtG-3H-t30"/>
             </connections>
             <point key="canvasLocation" x="258.01526717557249" y="33.098591549295776"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
