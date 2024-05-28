@@ -25,10 +25,10 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: - registerXIB
     private func registerXIB() {
-        let TravelCellXIB = UINib(nibName: "TravelListTableViewCell", bundle: nil)
-        let AdvertisementCellXIB = UINib(nibName: "TravelAdvertisementTableViewCell", bundle: nil)
-        travelTableView.register(TravelCellXIB, forCellReuseIdentifier: "TravelListTableViewCell")
-        travelTableView.register(AdvertisementCellXIB, forCellReuseIdentifier: "TravelAdvertisementTableViewCell")
+        let TravelCellXIB = UINib(nibName: TravelListTableViewCell.cellIdentifier, bundle: nil)
+        let AdvertisementCellXIB = UINib(nibName: TravelAdvertisementTableViewCell.cellIdentifier, bundle: nil)
+        travelTableView.register(TravelCellXIB, forCellReuseIdentifier: TravelListTableViewCell.cellIdentifier)
+        travelTableView.register(AdvertisementCellXIB, forCellReuseIdentifier: TravelAdvertisementTableViewCell.cellIdentifier)
     }
     
     
@@ -45,12 +45,12 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
         let rowData = travelList[indexPath.row]
         
         if rowData.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelAdvertisementTableViewCell", for: indexPath) as! TravelAdvertisementTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TravelAdvertisementTableViewCell.cellIdentifier, for: indexPath) as! TravelAdvertisementTableViewCell
             cell.setupData(data: rowData)
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelListTableViewCell", for: indexPath) as! TravelListTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TravelListTableViewCell.cellIdentifier, for: indexPath) as! TravelListTableViewCell
             cell.setupData(data: rowData)
             cell.likeButton.tag = indexPath.row
             cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)

@@ -28,7 +28,7 @@ class TravelMagazineTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelMagazineTableViewCell", for: indexPath) as! TravelMagazineTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelMagazineTableViewCell.cellIdentifier, for: indexPath) as! TravelMagazineTableViewCell
         let rowData = magazineInfo.magazine[indexPath.row]
         
         /// [1] Kingfisher 사용

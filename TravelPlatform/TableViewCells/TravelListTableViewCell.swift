@@ -9,6 +9,9 @@ import UIKit
 import Cosmos
 
 class TravelListTableViewCell: UITableViewCell {
+    
+    static let cellIdentifier = "TravelListTableViewCell"
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subTitleLabel: UILabel!
     @IBOutlet var mainImageView: UIImageView!

@@ -9,6 +9,8 @@ import UIKit
 
 class TravelMagazineTableViewCell: UITableViewCell {
 
+    static let cellIdentifier = "TravelMagazineTableViewCell"
+    
     @IBOutlet var magazineImageView: UIImageView!
     @IBOutlet var magazineTitle: UILabel!
     @IBOutlet var magazineSubTitle: UILabel!
