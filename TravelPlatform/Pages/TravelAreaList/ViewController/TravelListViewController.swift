@@ -40,7 +40,6 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(#function, indexPath.row)
         
         let rowData = travelList[indexPath.row]
         
@@ -65,6 +64,26 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
             return 130
         } else {
             return 230
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rowData = travelList[indexPath.row]
+        
+        if rowData.ad {
+            //광고 뷰컨 띄우기
+            let sb = UIStoryboard(name: StoryboardName.TravelArea, bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: TravelAreaAdvertisementViewController.storyboardID) as! TravelAreaAdvertisementViewController
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
+            
+        }else {
+            //디테일 페이지로 푸시
+            let sb = UIStoryboard(name: StoryboardName.TravelArea, bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: TravelAreaDetailViewController.storyboardID) as! TravelAreaDetailViewController
+            navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
