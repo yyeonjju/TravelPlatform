@@ -125,6 +125,7 @@
                     <connections>
                         <segue destination="Gnz-r3-4UI" kind="relationship" relationship="viewControllers" id="ZYs-gH-VR8"/>
                         <segue destination="Hqk-Pc-pce" kind="relationship" relationship="viewControllers" id="K9s-AY-E83"/>
+                        <segue destination="RwE-JT-VkL" kind="relationship" relationship="viewControllers" id="QbG-3V-b0e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJK-8L-2bU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -330,8 +331,72 @@
             </objects>
             <point key="canvasLocation" x="93.89312977099236" y="1504.9295774647887"/>
         </scene>
+        <!--City Information List View Controller-->
+        <scene sceneID="Wpu-TF-vj8">
+            <objects>
+                <viewController storyboardIdentifier="CityInformationListViewController" id="KK9-JC-gbX" customClass="CityInformationListViewController" customModule="TravelPlatform" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cAl-hq-VnD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iwP-pE-Xcb">
+                                <rect key="frame" x="10" y="113" width="373" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IYP-pK-bxo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="efw-WE-6iR">
+                                <rect key="frame" x="10" y="173" width="373" height="596"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q14-FY-bef"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q14-FY-bef" firstAttribute="bottom" secondItem="efw-WE-6iR" secondAttribute="bottom" id="Qac-D2-q1e"/>
+                            <constraint firstItem="q14-FY-bef" firstAttribute="trailing" secondItem="efw-WE-6iR" secondAttribute="trailing" constant="10" id="Ume-Vc-uWE"/>
+                            <constraint firstItem="iwP-pE-Xcb" firstAttribute="top" secondItem="q14-FY-bef" secondAttribute="top" constant="10" id="bIA-Ti-0d8"/>
+                            <constraint firstItem="iwP-pE-Xcb" firstAttribute="leading" secondItem="q14-FY-bef" secondAttribute="leading" constant="10" id="cur-zT-TBN"/>
+                            <constraint firstItem="efw-WE-6iR" firstAttribute="leading" secondItem="q14-FY-bef" secondAttribute="leading" constant="10" id="gkU-8t-VVh"/>
+                            <constraint firstItem="efw-WE-6iR" firstAttribute="top" secondItem="iwP-pE-Xcb" secondAttribute="bottom" constant="20" id="rZE-OY-1Ye"/>
+                            <constraint firstItem="q14-FY-bef" firstAttribute="trailing" secondItem="iwP-pE-Xcb" secondAttribute="trailing" constant="10" id="uC1-Xg-mRq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CRx-28-46D"/>
+                    <connections>
+                        <outlet property="cityListTableView" destination="efw-WE-6iR" id="k8F-hI-fMU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3p-jo-AFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058.7786259541983" y="2424.6478873239439"/>
+        </scene>
+        <!--city-->
+        <scene sceneID="1qS-yd-x6G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RwE-JT-VkL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="city" image="building.2" catalog="system" id="WHc-Sd-INb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jLO-UU-np8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KK9-JC-gbX" kind="relationship" relationship="rootViewController" id="mOV-G8-XsY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovl-WZ-spW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132.06106870229007" y="2424.6478873239439"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="building.2" catalog="system" width="128" height="108"/>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
