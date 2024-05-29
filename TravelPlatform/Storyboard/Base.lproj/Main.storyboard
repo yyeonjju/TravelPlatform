@@ -345,9 +345,13 @@
                                     <constraint firstAttribute="height" constant="40" id="IYP-pK-bxo"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="모두"/>
+                                    <segment title="국내"/>
+                                    <segment title="해외"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentControlSelected:" destination="KK9-JC-gbX" eventType="valueChanged" id="oHl-uM-c8J"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="efw-WE-6iR">
                                 <rect key="frame" x="10" y="173" width="373" height="596"/>
@@ -369,6 +373,7 @@
                     <navigationItem key="navigationItem" id="CRx-28-46D"/>
                     <connections>
                         <outlet property="cityListTableView" destination="efw-WE-6iR" id="k8F-hI-fMU"/>
+                        <outlet property="cityLocationSegmentedControl" destination="iwP-pE-Xcb" id="5oQ-h9-XAQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3p-jo-AFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
