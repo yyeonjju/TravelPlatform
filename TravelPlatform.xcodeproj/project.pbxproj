@@ -90,11 +90,9 @@
 		7D2639FE2C02EF44008A8F4F /* TravelPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				7D263A5E2C0478C8008A8F4F /* ViewController */,
+				7D263AB02C0712AC008A8F4F /* Pages */,
 				7D263A1C2C02FE66008A8F4F /* Extension */,
 				7D263A192C02F58C008A8F4F /* Data */,
-				7D263A162C02F337008A8F4F /* TableViewCells */,
-				7D263A132C02F0DE008A8F4F /* TableVIewControllers */,
 				7D2639FF2C02EF44008A8F4F /* AppDelegate.swift */,
 				7D263A012C02EF44008A8F4F /* SceneDelegate.swift */,
 				7D263A032C02EF44008A8F4F /* ViewController.swift */,
@@ -110,22 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				7D263A142C02F12C008A8F4F /* TravelMagazineTableViewController.swift */,
-				7D263A282C0311B2008A8F4F /* RestaurantTableViewController.swift */,
 			);
 			path = TableVIewControllers;
-			sourceTree = "<group>";
-		};
-		7D263A162C02F337008A8F4F /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				7D263A172C02F351008A8F4F /* TravelMagazineTableViewCell.swift */,
-				7D263A2A2C0311D7008A8F4F /* RestaurantTableViewCell.swift */,
-				7D263A612C04795D008A8F4F /* TravelListTableViewCell.swift */,
-				7D263A622C04795D008A8F4F /* TravelListTableViewCell.xib */,
-				7D263A672C0480C7008A8F4F /* TravelAdvertisementTableViewCell.swift */,
-				7D263A682C0480C7008A8F4F /* TravelAdvertisementTableViewCell.xib */,
-			);
-			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		7D263A192C02F58C008A8F4F /* Data */ = {
@@ -154,6 +138,62 @@
 				7D263A5F2C0478F9008A8F4F /* TravelListViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7D263AB02C0712AC008A8F4F /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				7D263AB42C071439008A8F4F /* TravelAreaList */,
+				7D263AB22C0713CE008A8F4F /* Restaurant */,
+				7D263AB12C0713BE008A8F4F /* TravelMagazine */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		7D263AB12C0713BE008A8F4F /* TravelMagazine */ = {
+			isa = PBXGroup;
+			children = (
+				7D263AB32C0713FE008A8F4F /* TableViewCells */,
+				7D263A132C02F0DE008A8F4F /* TableVIewControllers */,
+			);
+			path = TravelMagazine;
+			sourceTree = "<group>";
+		};
+		7D263AB22C0713CE008A8F4F /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				7D263A2A2C0311D7008A8F4F /* RestaurantTableViewCell.swift */,
+				7D263A282C0311B2008A8F4F /* RestaurantTableViewController.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		7D263AB32C0713FE008A8F4F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7D263A172C02F351008A8F4F /* TravelMagazineTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		7D263AB42C071439008A8F4F /* TravelAreaList */ = {
+			isa = PBXGroup;
+			children = (
+				7D263A5E2C0478C8008A8F4F /* ViewController */,
+				7D263AB62C071453008A8F4F /* TableViewCells */,
+			);
+			path = TravelAreaList;
+			sourceTree = "<group>";
+		};
+		7D263AB62C071453008A8F4F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7D263A612C04795D008A8F4F /* TravelListTableViewCell.swift */,
+				7D263A622C04795D008A8F4F /* TravelListTableViewCell.xib */,
+				7D263A672C0480C7008A8F4F /* TravelAdvertisementTableViewCell.swift */,
+				7D263A682C0480C7008A8F4F /* TravelAdvertisementTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
