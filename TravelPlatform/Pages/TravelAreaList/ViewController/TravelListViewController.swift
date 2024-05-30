@@ -74,6 +74,7 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
             //광고 뷰컨 띄우기
             let sb = UIStoryboard(name: StoryboardName.TravelArea, bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: TravelAreaAdvertisementViewController.storyboardID) as! TravelAreaAdvertisementViewController
+            vc.advertisementComment = rowData.title
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
             present(nav, animated: true)
@@ -82,6 +83,7 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
             //디테일 페이지로 푸시
             let sb = UIStoryboard(name: StoryboardName.TravelArea, bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: TravelAreaDetailViewController.storyboardID) as! TravelAreaDetailViewController
+            vc.travelData = rowData
             navigationController?.pushViewController(vc, animated: true)
             
         }
