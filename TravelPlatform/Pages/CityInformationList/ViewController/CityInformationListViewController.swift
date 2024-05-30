@@ -41,7 +41,9 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
 
     // MARK: - Method
     
-    func setupFilteredList(searchText : String) {
+    func setupFilteredList() {
+        
+        guard let searchText = citySearchBar.text?.lowercased() else {return}
         
         //선택된 segment에 따라 필터링
         switch cityLocationSegmentedControl.selectedSegmentIndex {
@@ -63,7 +65,6 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
                 $0.city_english_name.lowercased().contains(searchText) ||
                 $0.city_explain.contains(searchText)
             }
-            citySearchBar.text = ""
         }
 
         cityListTableView.reloadData()
@@ -83,17 +84,23 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
         return cell
     }
     
+    
     // MARK: - Action
     @IBAction func segmentControlSelected(_ sender: UISegmentedControl) {
-        setupFilteredList(searchText: "")
+        setupFilteredList()
     }
 }
 
 extension CityInformationListViewController :UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = citySearchBar.text?.lowercased() else {return}
-        setupFilteredList(searchText: text)
+        setupFilteredList()
+        citySearchBar.text = ""
+        view.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        setupFilteredList()
     }
     
 }
