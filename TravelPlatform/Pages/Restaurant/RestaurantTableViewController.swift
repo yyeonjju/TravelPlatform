@@ -19,7 +19,7 @@ struct RestaurantCell {
 }
 
 class RestaurantTableViewController: UITableViewController {
-    var originalRestaurantData = RestaurantList().restaurantArray.map{
+    var originalRestaurantData = RestaurantList.restaurantArray.map{
         RestaurantCell(
             image : $0.image,
             name: $0.name,
@@ -40,9 +40,10 @@ class RestaurantTableViewController: UITableViewController {
         tableView.rowHeight = 250
         
         setupUI()
+        setupNavigation()
     }
     
-    // MARK: - setupUI
+    // MARK: - setup
     private func setupUI() {
         searchTextField.backgroundColor = .systemGray5
         searchTextField.placeholder = "식당을 검색하세요"
@@ -55,6 +56,14 @@ class RestaurantTableViewController: UITableViewController {
         searchBUtton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
         
     }
+    
+    private func setupNavigation() {
+        let map = UIBarButtonItem(image: UIImage(systemName: "map.fill"), style: .plain, target: self, action: #selector(pushToRestaurantMapVC))
+        map.tintColor = .black
+        navigationItem.title = "캘린더"
+        navigationItem.leftBarButtonItems = [map]
+    }
+
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,6 +132,13 @@ class RestaurantTableViewController: UITableViewController {
             }
         }
         tableView.reloadData()
+    }
+    
+    @objc func pushToRestaurantMapVC() {
+        let sb = UIStoryboard(name: "RestaurantMap", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: RestaurantMapViewController.storyboardID) as! RestaurantMapViewController
+        vc.restaurantsData = RestaurantList.restaurantArray
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

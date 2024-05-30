@@ -40,6 +40,8 @@
 		7D263ACD2C072971008A8F4F /* CityInformationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263ACA2C072971008A8F4F /* CityInformationListTableViewCell.swift */; };
 		7D3A8BF52C073944008BFE32 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8BF42C073944008BFE32 /* UIImageView+Extension.swift */; };
 		7D3A8BF72C07F979008BFE32 /* utilFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8BF62C07F979008BFE32 /* utilFunc.swift */; };
+		7D3A8C022C087453008BFE32 /* RestaurantMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */; };
+		7D3A8C042C0874D5008BFE32 /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		7D263ACB2C072971008A8F4F /* CityInformationListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInformationListTableViewCell.xib; sourceTree = "<group>"; };
 		7D3A8BF42C073944008BFE32 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		7D3A8BF62C07F979008BFE32 /* utilFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilFunc.swift; sourceTree = "<group>"; };
+		7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantMap.storyboard; sourceTree = "<group>"; };
+		7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 			children = (
 				7D263A2A2C0311D7008A8F4F /* RestaurantTableViewCell.swift */,
 				7D263A282C0311B2008A8F4F /* RestaurantTableViewController.swift */,
+				7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			children = (
 				7D263A052C02EF44008A8F4F /* Main.storyboard */,
 				7D263AB92C071692008A8F4F /* TravelArea.storyboard */,
+				7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				7D263A692C0480C7008A8F4F /* TravelAdvertisementTableViewCell.xib in Resources */,
 				7D263ACC2C072971008A8F4F /* CityInformationListTableViewCell.xib in Resources */,
 				7D263A072C02EF44008A8F4F /* Base in Resources */,
+				7D3A8C022C087453008BFE32 /* RestaurantMap.storyboard in Resources */,
 				7D263ABA2C071692008A8F4F /* TravelArea.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +391,7 @@
 				7D263A1E2C02FE79008A8F4F /* DateFormatter.swift in Sources */,
 				7D263A022C02EF44008A8F4F /* SceneDelegate.swift in Sources */,
 				7D263A152C02F12C008A8F4F /* TravelMagazineTableViewController.swift in Sources */,
+				7D3A8C042C0874D5008BFE32 /* RestaurantMapViewController.swift in Sources */,
 				7D263A1B2C02F5BF008A8F4F /* MagazineInfo.swift in Sources */,
 				7D263A6A2C0480C7008A8F4F /* TravelAdvertisementTableViewCell.swift in Sources */,
 				7D263ABD2C0717C6008A8F4F /* TravelAreaDetailViewController.swift in Sources */,
