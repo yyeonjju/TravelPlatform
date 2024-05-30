@@ -15,12 +15,12 @@ class CityInformationListTableViewCell: UITableViewCell {
     @IBOutlet var cityNameLabel: UILabel!
     @IBOutlet var bottomCityNamesLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()
     }
 
+    // MARK: - setup
     
     private func configureUI() {
         cityImageView.configureDefaultImageView()
@@ -36,11 +36,17 @@ class CityInformationListTableViewCell: UITableViewCell {
         bottomCityNamesLabel.font = .boldSystemFont(ofSize: 14)
     }
     
-    func configureData(data:City) {
+    func configureData(data:City, searchText : String?) {
         let url = URL(string: data.city_image)
         cityImageView.kf.setImage(with: url)
         cityNameLabel.text = "\(data.city_name) | \(data.city_english_name)"
         bottomCityNamesLabel.text = " \(data.city_explain)"
+        
+        [cityNameLabel, bottomCityNamesLabel]
+            .forEach{
+                changeSpecificTextColor(searchText: searchText, uiLabel: $0)
+            }
     }
-    
 }
+
+

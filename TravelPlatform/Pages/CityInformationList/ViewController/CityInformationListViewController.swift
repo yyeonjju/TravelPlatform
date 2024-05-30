@@ -80,7 +80,7 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CityInformationListTableViewCell.cellIdentifier, for: indexPath) as! CityInformationListTableViewCell
         let rowData = cityList[indexPath.row]
-        cell.configureData(data: rowData)
+        cell.configureData(data: rowData, searchText: citySearchBar.text)
         return cell
     }
     
@@ -102,7 +102,6 @@ extension CityInformationListViewController :UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         setupFilteredList()
     }
-    
 }
 
 
