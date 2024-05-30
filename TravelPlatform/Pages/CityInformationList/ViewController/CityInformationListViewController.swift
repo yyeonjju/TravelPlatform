@@ -11,6 +11,7 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
     static let storyboardID = "CityInformationListViewController"
     var cityList = CityInfo.city
     
+    @IBOutlet var citySearchBar: UISearchBar!
     @IBOutlet var cityListTableView: UITableView!
     @IBOutlet var cityLocationSegmentedControl: UISegmentedControl!
     
@@ -20,10 +21,13 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
         navigationItem.title = "인기도시"
         
         setupTableView()
-        setupSegmentControl()
     }
     
     // MARK: - Setup
+    
+    private func setupSearchBar() {
+        citySearchBar.delegate = self
+    }
     
     private func setupTableView() {
         cityListTableView.rowHeight = 130
@@ -34,37 +38,12 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
         let cityCellXIB = UINib(nibName: CityInformationListTableViewCell.cellIdentifier, bundle: nil)
         cityListTableView.register(cityCellXIB, forCellReuseIdentifier: CityInformationListTableViewCell.cellIdentifier)
     }
-    
-    private func setupSegmentControl() {
-//        segmentTitleList.enumerated().forEach{
-//            cityLocationSegmentedControl.insertSegment(withTitle: $0.element, at: $0.offset, animated: true)
-//            
-//            cityLocationSegmentedControl.seg
-//        }
-       
-    }
-    
-    
-    // MARK: - Delegate
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cityList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CityInformationListTableViewCell.cellIdentifier, for: indexPath) as! CityInformationListTableViewCell
-        let rowData = cityList[indexPath.row]
-        
-        cell.configureData(data: rowData)
-        
-        return cell
-    }
-    
-    // MARK: - Action
 
+    // MARK: - Method
     
-    @IBAction func segmentControlSelected(_ sender: UISegmentedControl) {
+    func setupFilteredList(searchText : String) {
         
+        //선택된 segment에 따라 필터링
         switch cityLocationSegmentedControl.selectedSegmentIndex {
         case 0:
             cityList = CityInfo.city
@@ -76,9 +55,51 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
             break
         }
         
+        //공백 검증
+        if !isOnlyWhitespace(text: searchText) {
+            //서치바에 작성한 검색어에 따라 필터링
+            cityList = self.cityList.filter {
+                $0.city_name.contains(searchText) ||
+                $0.city_english_name.lowercased().contains(searchText) ||
+                $0.city_explain.contains(searchText)
+            }
+            citySearchBar.text = ""
+        }
+
         cityListTableView.reloadData()
     }
+
     
-
-
+    // MARK: - Delegate
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cityList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityInformationListTableViewCell.cellIdentifier, for: indexPath) as! CityInformationListTableViewCell
+        let rowData = cityList[indexPath.row]
+        cell.configureData(data: rowData)
+        return cell
+    }
+    
+    // MARK: - Action
+    @IBAction func segmentControlSelected(_ sender: UISegmentedControl) {
+        setupFilteredList(searchText: "")
+    }
 }
+
+extension CityInformationListViewController :UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = citySearchBar.text?.lowercased() else {return}
+        setupFilteredList(searchText: text)
+    }
+    
+}
+
+
+
+
+
+

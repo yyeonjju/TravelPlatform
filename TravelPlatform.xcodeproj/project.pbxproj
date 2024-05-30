@@ -39,6 +39,7 @@
 		7D263ACC2C072971008A8F4F /* CityInformationListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D263ACB2C072971008A8F4F /* CityInformationListTableViewCell.xib */; };
 		7D263ACD2C072971008A8F4F /* CityInformationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263ACA2C072971008A8F4F /* CityInformationListTableViewCell.swift */; };
 		7D3A8BF52C073944008BFE32 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8BF42C073944008BFE32 /* UIImageView+Extension.swift */; };
+		7D3A8BF72C07F979008BFE32 /* utilFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8BF62C07F979008BFE32 /* utilFunc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		7D263ACA2C072971008A8F4F /* CityInformationListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInformationListTableViewCell.swift; sourceTree = "<group>"; };
 		7D263ACB2C072971008A8F4F /* CityInformationListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInformationListTableViewCell.xib; sourceTree = "<group>"; };
 		7D3A8BF42C073944008BFE32 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		7D3A8BF62C07F979008BFE32 /* utilFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilFunc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				7D263AC12C071A12008A8F4F /* Namespace.swift */,
+				7D3A8BF62C07F979008BFE32 /* utilFunc.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				7D263AC72C072569008A8F4F /* CityInformationListViewController.swift in Sources */,
 				7D263A2B2C0311D7008A8F4F /* RestaurantTableViewCell.swift in Sources */,
 				7D263A002C02EF44008A8F4F /* AppDelegate.swift in Sources */,
+				7D3A8BF72C07F979008BFE32 /* utilFunc.swift in Sources */,
 				7D263AC22C071A12008A8F4F /* Namespace.swift in Sources */,
 				7D263A232C0304B6008A8F4F /* ImageManager.swift in Sources */,
 				7D263A642C04795D008A8F4F /* TravelListTableViewCell.swift in Sources */,

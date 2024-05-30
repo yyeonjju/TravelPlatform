@@ -24,6 +24,7 @@ class CityInformationListTableViewCell: UITableViewCell {
     
     private func configureUI() {
         cityImageView.configureDefaultImageView()
+        cityImageView.layer.masksToBounds = true
         
         cityNameLabel.textColor = .white
         cityNameLabel.font = .boldSystemFont(ofSize: 17)

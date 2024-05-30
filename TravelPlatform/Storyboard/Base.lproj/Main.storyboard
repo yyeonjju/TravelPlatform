@@ -339,8 +339,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zce-4m-P1E">
+                                <rect key="frame" x="0.0" y="113" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ibH-Xq-akA"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KK9-JC-gbX" id="0aI-ca-Oc8"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="efw-WE-6iR">
+                                <rect key="frame" x="10" y="242" width="373" height="527"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iwP-pE-Xcb">
-                                <rect key="frame" x="10" y="113" width="373" height="41"/>
+                                <rect key="frame" x="10" y="182" width="373" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IYP-pK-bxo"/>
                                 </constraints>
@@ -353,19 +367,18 @@
                                     <action selector="segmentControlSelected:" destination="KK9-JC-gbX" eventType="valueChanged" id="oHl-uM-c8J"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="efw-WE-6iR">
-                                <rect key="frame" x="10" y="173" width="373" height="596"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q14-FY-bef"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zce-4m-P1E" firstAttribute="top" secondItem="q14-FY-bef" secondAttribute="top" constant="10" id="OcQ-x6-vTm"/>
                             <constraint firstItem="q14-FY-bef" firstAttribute="bottom" secondItem="efw-WE-6iR" secondAttribute="bottom" id="Qac-D2-q1e"/>
                             <constraint firstItem="q14-FY-bef" firstAttribute="trailing" secondItem="efw-WE-6iR" secondAttribute="trailing" constant="10" id="Ume-Vc-uWE"/>
-                            <constraint firstItem="iwP-pE-Xcb" firstAttribute="top" secondItem="q14-FY-bef" secondAttribute="top" constant="10" id="bIA-Ti-0d8"/>
+                            <constraint firstItem="iwP-pE-Xcb" firstAttribute="top" secondItem="zce-4m-P1E" secondAttribute="bottom" constant="25" id="bIA-Ti-0d8"/>
                             <constraint firstItem="iwP-pE-Xcb" firstAttribute="leading" secondItem="q14-FY-bef" secondAttribute="leading" constant="10" id="cur-zT-TBN"/>
                             <constraint firstItem="efw-WE-6iR" firstAttribute="leading" secondItem="q14-FY-bef" secondAttribute="leading" constant="10" id="gkU-8t-VVh"/>
+                            <constraint firstItem="zce-4m-P1E" firstAttribute="leading" secondItem="q14-FY-bef" secondAttribute="leading" id="kdZ-CW-f27"/>
+                            <constraint firstItem="zce-4m-P1E" firstAttribute="trailing" secondItem="q14-FY-bef" secondAttribute="trailing" id="ps3-CA-1FD"/>
                             <constraint firstItem="efw-WE-6iR" firstAttribute="top" secondItem="iwP-pE-Xcb" secondAttribute="bottom" constant="20" id="rZE-OY-1Ye"/>
                             <constraint firstItem="q14-FY-bef" firstAttribute="trailing" secondItem="iwP-pE-Xcb" secondAttribute="trailing" constant="10" id="uC1-Xg-mRq"/>
                         </constraints>
@@ -374,6 +387,7 @@
                     <connections>
                         <outlet property="cityListTableView" destination="efw-WE-6iR" id="k8F-hI-fMU"/>
                         <outlet property="cityLocationSegmentedControl" destination="iwP-pE-Xcb" id="5oQ-h9-XAQ"/>
+                        <outlet property="citySearchBar" destination="zce-4m-P1E" id="FZL-dh-l4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3p-jo-AFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
