@@ -8,7 +8,11 @@
 import UIKit
 
 class CityInformationListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var cityList = CityInfo.city
+    var cityList = CityInfo.city {
+        didSet {
+            cityListTableView.reloadData()
+        }
+    }
     
     @IBOutlet var citySearchBar: UISearchBar!
     @IBOutlet var cityListTableView: UITableView!
@@ -43,15 +47,16 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
     func setupFilteredList() {
         
         guard let searchText = citySearchBar.text?.lowercased() else {return}
+        var resultlist : [City] = []
         
         //선택된 segment에 따라 필터링
         switch cityLocationSegmentedControl.selectedSegmentIndex {
         case 0:
-            cityList = CityInfo.city
+            resultlist = CityInfo.city
         case 1:
-            cityList = CityInfo.city.filter{$0.domestic_travel}
+            resultlist = CityInfo.city.filter{$0.domestic_travel}
         case 2:
-            cityList = CityInfo.city.filter{!$0.domestic_travel}
+            resultlist = CityInfo.city.filter{!$0.domestic_travel}
         default:
             break
         }
@@ -59,14 +64,14 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
         //공백 검증
         if !isOnlyWhitespace(text: searchText) {
             //서치바에 작성한 검색어에 따라 필터링
-            cityList = self.cityList.filter {
+            resultlist = resultlist.filter {
                 $0.city_name.contains(searchText) ||
                 $0.city_english_name.lowercased().contains(searchText) ||
                 $0.city_explain.contains(searchText)
             }
         }
-
-        cityListTableView.reloadData()
+        
+        cityList = resultlist
     }
 
     
