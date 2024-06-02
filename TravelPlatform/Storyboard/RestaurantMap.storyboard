@@ -18,26 +18,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="369-hf-BYf">
-                                <rect key="frame" x="0.0" y="79" width="393" height="719"/>
+                                <rect key="frame" x="0.0" y="114" width="393" height="684"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GII-Pz-Ogn">
+                                <rect key="frame" x="10" y="69" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="eZW-bF-6Bm"/>
+                                    <constraint firstAttribute="width" constant="150" id="v0e-OH-YdW"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="카테고리별 찾기"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv9-Ri-qKS">
+                                <rect key="frame" x="168" y="69" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="vd3-D9-bxF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="369-hf-BYf" secondAttribute="trailing" id="Jwl-ke-dbH"/>
+                            <constraint firstItem="Tv9-Ri-qKS" firstAttribute="centerY" secondItem="GII-Pz-Ogn" secondAttribute="centerY" id="TNc-le-V5m"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="369-hf-BYf" secondAttribute="bottom" constant="20" id="Wvt-Bq-bHD"/>
+                            <constraint firstItem="GII-Pz-Ogn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="eHv-CZ-zFZ"/>
                             <constraint firstItem="369-hf-BYf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gD3-R9-JOQ"/>
-                            <constraint firstItem="369-hf-BYf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="vLD-Sw-DCs"/>
+                            <constraint firstItem="GII-Pz-Ogn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="mlK-Tb-LaR"/>
+                            <constraint firstItem="369-hf-BYf" firstAttribute="top" secondItem="GII-Pz-Ogn" secondAttribute="bottom" constant="10" id="vLD-Sw-DCs"/>
+                            <constraint firstItem="Tv9-Ri-qKS" firstAttribute="leading" secondItem="GII-Pz-Ogn" secondAttribute="trailing" constant="8" id="zad-Xm-yeF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryAlertButton" destination="GII-Pz-Ogn" id="0o1-R4-2rQ"/>
+                        <outlet property="entireRestaurantButton" destination="Tv9-Ri-qKS" id="dvJ-86-WdU"/>
                         <outlet property="mapView" destination="369-hf-BYf" id="eQn-9p-71K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="4"/>
+            <point key="canvasLocation" x="26.717557251908396" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

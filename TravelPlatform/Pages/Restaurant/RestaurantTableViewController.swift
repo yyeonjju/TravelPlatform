@@ -60,7 +60,7 @@ class RestaurantTableViewController: UITableViewController {
     private func setupNavigation() {
         let map = UIBarButtonItem(image: UIImage(systemName: "map.fill"), style: .plain, target: self, action: #selector(pushToRestaurantMapVC))
         map.tintColor = .black
-        navigationItem.title = "캘린더"
+        navigationItem.title = "음식점"
         navigationItem.leftBarButtonItems = [map]
     }
 
@@ -89,7 +89,7 @@ class RestaurantTableViewController: UITableViewController {
         
         cell.restaurantCategoryLabel.text = "카테고리 : \(rowData.category)"
         
-        cell.restaurantPriceLabel.text = "전화번호 : \(rowData.price.formatted())"
+        cell.restaurantPriceLabel.text = "가격 : \(rowData.price.formatted())"
         
         [cell.restaurantNameLabel, cell.restaurantAddressLabel, cell.restaurantPhoneNumberLabel, cell.restaurantCategoryLabel, cell.restaurantPriceLabel]
             .forEach{

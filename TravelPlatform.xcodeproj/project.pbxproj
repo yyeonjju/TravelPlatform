@@ -43,6 +43,7 @@
 		7D3A8C022C087453008BFE32 /* RestaurantMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */; };
 		7D3A8C042C0874D5008BFE32 /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */; };
 		7D500B5B2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D500B5A2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift */; };
+		7D500B5D2C0C4DCB006799F2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D500B5C2C0C4DCB006799F2 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantMap.storyboard; sourceTree = "<group>"; };
 		7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
 		7D500B5A2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		7D500B5C2C0C4DCB006799F2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				7D263A1D2C02FE79008A8F4F /* DateFormatter.swift */,
 				7D263A652C047E14008A8F4F /* UILabel+Extension.swift */,
 				7D3A8BF42C073944008BFE32 /* UIImageView+Extension.swift */,
+				7D500B5C2C0C4DCB006799F2 /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				7D263A002C02EF44008A8F4F /* AppDelegate.swift in Sources */,
 				7D3A8BF72C07F979008BFE32 /* utilFunc.swift in Sources */,
 				7D263AC22C071A12008A8F4F /* Namespace.swift in Sources */,
+				7D500B5D2C0C4DCB006799F2 /* UIButton+Extension.swift in Sources */,
 				7D263A232C0304B6008A8F4F /* ImageManager.swift in Sources */,
 				7D263A642C04795D008A8F4F /* TravelListTableViewCell.swift in Sources */,
 				7D263ACD2C072971008A8F4F /* CityInformationListTableViewCell.swift in Sources */,
@@ -486,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -543,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

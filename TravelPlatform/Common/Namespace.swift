@@ -15,5 +15,10 @@ enum StoryboardName {
 
 enum FontSet {
     static let BigBoldFont : UIFont = .boldSystemFont(ofSize: 20)
-    
+}
+
+enum RestaurantCategoryKeyword {
+    static let koreanFood = "한식"
+    static let chineseFood = "중식"
+    static let japaneseFood = "일식"
 }
