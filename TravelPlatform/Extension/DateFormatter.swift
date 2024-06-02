@@ -21,4 +21,18 @@ extension DateFormatter {
         return formatter
     }
     
+    static var yearMonthDaySeparatedByHyphen : DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }
+    
+    static var yearMonthDaySeparatedBySlash : DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy/MM/dd"
+        return formatter
+    }
+    
+    
+    
 }

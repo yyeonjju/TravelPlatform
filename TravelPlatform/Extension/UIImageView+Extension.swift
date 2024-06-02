@@ -15,4 +15,10 @@ extension UIImageView {
         self.contentMode = .scaleAspectFill
     }
     
+    func configureCircleImageView() {
+        self.backgroundColor = .gray
+        self.layer.cornerRadius = self.frame.width/2
+        self.contentMode = .scaleAspectFill
+    }
+    
 }
