@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 class TravelAreaDetailViewController: UIViewController {
-    static let storyboardID = "TravelAreaDetailViewController"
     
     @IBOutlet var travelImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!

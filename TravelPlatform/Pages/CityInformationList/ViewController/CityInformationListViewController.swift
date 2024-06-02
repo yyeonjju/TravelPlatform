@@ -8,7 +8,6 @@
 import UIKit
 
 class CityInformationListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    static let storyboardID = "CityInformationListViewController"
     var cityList = CityInfo.city
     
     @IBOutlet var citySearchBar: UISearchBar!
@@ -35,8 +34,8 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
         cityListTableView.dataSource = self
         cityListTableView.delegate = self
         
-        let cityCellXIB = UINib(nibName: CityInformationListTableViewCell.cellIdentifier, bundle: nil)
-        cityListTableView.register(cityCellXIB, forCellReuseIdentifier: CityInformationListTableViewCell.cellIdentifier)
+        let cityCellXIB = UINib(nibName: CityInformationListTableViewCell.identifier, bundle: nil)
+        cityListTableView.register(cityCellXIB, forCellReuseIdentifier: CityInformationListTableViewCell.identifier)
     }
 
     // MARK: - Method
@@ -78,7 +77,7 @@ class CityInformationListViewController: UIViewController, UITableViewDelegate, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CityInformationListTableViewCell.cellIdentifier, for: indexPath) as! CityInformationListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityInformationListTableViewCell.identifier, for: indexPath) as! CityInformationListTableViewCell
         let rowData = cityList[indexPath.row]
         cell.configureData(data: rowData, searchText: citySearchBar.text)
         return cell

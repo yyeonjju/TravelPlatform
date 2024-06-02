@@ -42,6 +42,7 @@
 		7D3A8BF72C07F979008BFE32 /* utilFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8BF62C07F979008BFE32 /* utilFunc.swift */; };
 		7D3A8C022C087453008BFE32 /* RestaurantMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */; };
 		7D3A8C042C0874D5008BFE32 /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */; };
+		7D500B5B2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D500B5A2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		7D3A8BF62C07F979008BFE32 /* utilFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilFunc.swift; sourceTree = "<group>"; };
 		7D3A8C012C087453008BFE32 /* RestaurantMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantMap.storyboard; sourceTree = "<group>"; };
 		7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
+		7D500B5A2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		7D2639FE2C02EF44008A8F4F /* TravelPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				7D500B592C0C2C42006799F2 /* Protocol */,
 				7D263AC02C071A00008A8F4F /* Common */,
 				7D263AB82C071677008A8F4F /* Storyboard */,
 				7D263AB02C0712AC008A8F4F /* Pages */,
@@ -288,6 +291,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		7D500B592C0C2C42006799F2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7D500B5A2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,6 +390,7 @@
 				7D3A8BF52C073944008BFE32 /* UIImageView+Extension.swift in Sources */,
 				7D263A292C0311B2008A8F4F /* RestaurantTableViewController.swift in Sources */,
 				7D263A5D2C047674008A8F4F /* TravelModel.swift in Sources */,
+				7D500B5B2C0C2CA9006799F2 /* ReuseIdentifierProtocol.swift in Sources */,
 				7D263ABF2C071871008A8F4F /* TravelAreaAdvertisementViewController.swift in Sources */,
 				7D263AC72C072569008A8F4F /* CityInformationListViewController.swift in Sources */,
 				7D263A2B2C0311D7008A8F4F /* RestaurantTableViewCell.swift in Sources */,

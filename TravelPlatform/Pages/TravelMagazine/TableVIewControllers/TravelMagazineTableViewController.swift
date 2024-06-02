@@ -26,7 +26,7 @@ class TravelMagazineTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TravelMagazineTableViewCell.cellIdentifier, for: indexPath) as! TravelMagazineTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelMagazineTableViewCell.identifier, for: indexPath) as! TravelMagazineTableViewCell
         let rowData = magazineInfo.magazine[indexPath.row]
         
         cell.configureData(data: rowData)

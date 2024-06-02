@@ -8,7 +8,6 @@
 import UIKit
 
 class TravelAreaAdvertisementViewController: UIViewController {
-    static let storyboardID = "TravelAreaAdvertisementViewController"
     var advertisementComment : String?
     
     @IBOutlet var advertisementCommentLabel: UILabel!

@@ -9,7 +9,6 @@ import UIKit
 import MapKit
 
 class RestaurantMapViewController: UIViewController {
-    static let storyboardID = "RestaurantMapViewController"
     var restaurantsData : [Restaurant]?
     
     @IBOutlet var mapView: MKMapView!

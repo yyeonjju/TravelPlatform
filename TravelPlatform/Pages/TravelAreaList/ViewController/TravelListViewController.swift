@@ -25,10 +25,10 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: - registerXIB
     private func registerXIB() {
-        let TravelCellXIB = UINib(nibName: TravelListTableViewCell.cellIdentifier, bundle: nil)
-        let AdvertisementCellXIB = UINib(nibName: TravelAdvertisementTableViewCell.cellIdentifier, bundle: nil)
-        travelTableView.register(TravelCellXIB, forCellReuseIdentifier: TravelListTableViewCell.cellIdentifier)
-        travelTableView.register(AdvertisementCellXIB, forCellReuseIdentifier: TravelAdvertisementTableViewCell.cellIdentifier)
+        let TravelCellXIB = UINib(nibName: TravelListTableViewCell.identifier, bundle: nil)
+        let AdvertisementCellXIB = UINib(nibName: TravelAdvertisementTableViewCell.identifier, bundle: nil)
+        travelTableView.register(TravelCellXIB, forCellReuseIdentifier: TravelListTableViewCell.identifier)
+        travelTableView.register(AdvertisementCellXIB, forCellReuseIdentifier: TravelAdvertisementTableViewCell.identifier)
     }
     
     
@@ -44,12 +44,12 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
         let rowData = travelList[indexPath.row]
         
         if rowData.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: TravelAdvertisementTableViewCell.cellIdentifier, for: indexPath) as! TravelAdvertisementTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TravelAdvertisementTableViewCell.identifier, for: indexPath) as! TravelAdvertisementTableViewCell
             cell.setupData(data: rowData)
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: TravelListTableViewCell.cellIdentifier, for: indexPath) as! TravelListTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TravelListTableViewCell.identifier, for: indexPath) as! TravelListTableViewCell
             cell.setupData(data: rowData)
             cell.likeButton.tag = indexPath.row
             cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
@@ -73,7 +73,7 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
         if rowData.ad {
             //광고 뷰컨 띄우기
             let sb = UIStoryboard(name: StoryboardName.TravelArea, bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: TravelAreaAdvertisementViewController.storyboardID) as! TravelAreaAdvertisementViewController
+            let vc = sb.instantiateViewController(withIdentifier: TravelAreaAdvertisementViewController.identifier) as! TravelAreaAdvertisementViewController
             vc.advertisementComment = rowData.title
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
@@ -82,7 +82,7 @@ class TravelListViewController: UIViewController, UITableViewDelegate, UITableVi
         }else {
             //디테일 페이지로 푸시
             let sb = UIStoryboard(name: StoryboardName.TravelArea, bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: TravelAreaDetailViewController.storyboardID) as! TravelAreaDetailViewController
+            let vc = sb.instantiateViewController(withIdentifier: TravelAreaDetailViewController.identifier) as! TravelAreaDetailViewController
             vc.travelData = rowData
             navigationController?.pushViewController(vc, animated: true)
             

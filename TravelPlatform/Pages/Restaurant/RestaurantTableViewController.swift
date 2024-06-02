@@ -72,7 +72,7 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.cellIdentifier, for: indexPath) as! RestaurantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
         let rowData = restaurantTableViewList[indexPath.row]
         
         let url = URL(string: rowData.image)
@@ -136,7 +136,7 @@ class RestaurantTableViewController: UITableViewController {
     
     @objc func pushToRestaurantMapVC() {
         let sb = UIStoryboard(name: "RestaurantMap", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: RestaurantMapViewController.storyboardID) as! RestaurantMapViewController
+        let vc = sb.instantiateViewController(withIdentifier: RestaurantMapViewController.identifier) as! RestaurantMapViewController
         vc.restaurantsData = RestaurantList.restaurantArray
         navigationController?.pushViewController(vc, animated: true)
     }

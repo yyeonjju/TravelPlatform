@@ -9,8 +9,6 @@ import UIKit
 
 class TravelAdvertisementTableViewCell: UITableViewCell {
     
-    static let cellIdentifier = "TravelAdvertisementTableViewCell"
-    
     let colorArray : [UIColor] = [.blue, .systemPink, .systemCyan, .systemMint, .systemBrown]
     @IBOutlet var cellBackgroundView: UIView!
     @IBOutlet var advertisementLabel: UILabel!

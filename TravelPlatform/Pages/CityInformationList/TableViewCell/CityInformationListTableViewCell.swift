@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 class CityInformationListTableViewCell: UITableViewCell {
-    static let cellIdentifier = "CityInformationListTableViewCell"
 
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityNameLabel: UILabel!

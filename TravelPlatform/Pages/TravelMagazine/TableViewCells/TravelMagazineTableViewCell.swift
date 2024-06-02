@@ -9,8 +9,7 @@ import UIKit
 import Kingfisher
 
 class TravelMagazineTableViewCell: UITableViewCell {
-
-    static let cellIdentifier = "TravelMagazineTableViewCell"
+    
     let imageManager = ImageManager()
     var rowNumber = 0
     
