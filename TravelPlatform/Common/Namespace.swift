@@ -11,6 +11,7 @@ import UIKit
 enum StoryboardName {
     static let Main = "Main"
     static let TravelArea = "TravelArea"
+    static let ChattingRoom = "ChattingRoom"
 }
 
 enum FontSet {
