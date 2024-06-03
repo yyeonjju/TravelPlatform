@@ -8,16 +8,52 @@
 import UIKit
 
 class SendChattingTableViewCell: UITableViewCell {
-
+    @IBOutlet var chattingContentLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
+    var chattingData : Chat?
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
     }
+    
+    // MARK: - Setup
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    private func setupUI(){
+        chattingContentLabel.layer.cornerRadius = 10
+        chattingContentLabel.layer.borderWidth = 2
+        chattingContentLabel.layer.borderColor = UIColor.lightGray.cgColor
+        chattingContentLabel.numberOfLines = 0
+        chattingContentLabel.backgroundColor = .systemGray5
+        chattingContentLabel.layer.masksToBounds = true
+//        chattingContentLabel.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    func setupData(data : Chat?) {
 
-        // Configure the view for the selected state
+        chattingContentLabel.text = data?.message
+        dateLabel.text = formatDateString(date: data?.date ?? "")
+        
+        
+    }
+    
+    
+    // MARK: - Method
+    
+    private func formatDateString(date:String) -> String {
+        let dateArray = date.components(separatedBy: " ")
+        if dateArray.count > 0 {
+            let timeString = date.components(separatedBy: " ")[1]
+            return timeString
+        }
+        return ""
     }
     
 }

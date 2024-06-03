@@ -59,6 +59,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="j0U-I4-YcP" firstAttribute="leading" secondItem="nRW-J9-VD5" secondAttribute="trailing" id="xLO-Hs-yaS"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -15,8 +15,10 @@ extension ChattingRoomViewController : UITableViewDelegate, UITableViewDataSourc
         
         chattingTableView.rowHeight = UITableView.automaticDimension
         
-        let xib = UINib(nibName:ReceiveChattingTableViewCell.identifier, bundle: nil)
-        chattingTableView.register(xib, forCellReuseIdentifier: ReceiveChattingTableViewCell.identifier)
+        let receiveCellXIB = UINib(nibName:ReceiveChattingTableViewCell.identifier, bundle: nil)
+        chattingTableView.register(receiveCellXIB, forCellReuseIdentifier: ReceiveChattingTableViewCell.identifier)
+        let sendCellXIB = UINib(nibName:SendChattingTableViewCell.identifier, bundle: nil)
+        chattingTableView.register(sendCellXIB, forCellReuseIdentifier: SendChattingTableViewCell.identifier)
     }
     
     
@@ -27,7 +29,9 @@ extension ChattingRoomViewController : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rowData = chattingData?.chatList[indexPath.row]
         if rowData?.user == .user {
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: SendChattingTableViewCell.identifier, for: indexPath) as! SendChattingTableViewCell
+            cell.setupData(data: rowData)
+            return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ReceiveChattingTableViewCell.identifier, for: indexPath) as! ReceiveChattingTableViewCell
             cell.setupData(data: rowData)
