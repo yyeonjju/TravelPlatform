@@ -15,6 +15,9 @@ class RestaurantMapViewController: UIViewController {
             setupMapAnnotaion()
         }
     }
+    
+    //⭐️ 위치 매니저 생성
+    let locationManager = CLLocationManager()
 
     @IBOutlet var categoryAlertButton: UIButton!
     @IBOutlet var entireRestaurantButton: UIButton!
@@ -28,6 +31,9 @@ class RestaurantMapViewController: UIViewController {
         
         setupUI()
         setupTarget()
+        
+        //⭐️클래스와 프로토콜 연결
+       locationManager.delegate = self
 
     }
     

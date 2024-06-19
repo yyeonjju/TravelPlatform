@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D170B962C2307820003DB95 /* RestaurantMapViewController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D170B952C2307820003DB95 /* RestaurantMapViewController+Location.swift */; };
 		7D263A002C02EF44008A8F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2639FF2C02EF44008A8F4F /* AppDelegate.swift */; };
 		7D263A022C02EF44008A8F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A012C02EF44008A8F4F /* SceneDelegate.swift */; };
 		7D263A042C02EF44008A8F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D263A032C02EF44008A8F4F /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D170B952C2307820003DB95 /* RestaurantMapViewController+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantMapViewController+Location.swift"; sourceTree = "<group>"; };
 		7D2639FC2C02EF44008A8F4F /* TravelPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2639FF2C02EF44008A8F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D263A012C02EF44008A8F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				7D263A2A2C0311D7008A8F4F /* RestaurantTableViewCell.swift */,
 				7D263A282C0311B2008A8F4F /* RestaurantTableViewController.swift */,
 				7D3A8C032C0874D5008BFE32 /* RestaurantMapViewController.swift */,
+				7D170B952C2307820003DB95 /* RestaurantMapViewController+Location.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				7D263ABF2C071871008A8F4F /* TravelAreaAdvertisementViewController.swift in Sources */,
 				7D263AC72C072569008A8F4F /* CityInformationListViewController.swift in Sources */,
 				7D263A2B2C0311D7008A8F4F /* RestaurantTableViewCell.swift in Sources */,
+				7D170B962C2307820003DB95 /* RestaurantMapViewController+Location.swift in Sources */,
 				7D263A002C02EF44008A8F4F /* AppDelegate.swift in Sources */,
 				7D3A8BF72C07F979008BFE32 /* utilFunc.swift in Sources */,
 				7D263AC22C071A12008A8F4F /* Namespace.swift in Sources */,
